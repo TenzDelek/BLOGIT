@@ -25,3 +25,7 @@ const nextConfig={
 9. so the traditional route handler(api) is used for webhook only in next
 10. in dynamic route = when we want to have access of url param we can pass
 params(predefine)like children to get access of it(see post [id])
+11. the loading.tsx file will auto make the suspense for you (in next.js)
+- but sometime we dont use loading.tsx but we use **suspense** itself with its fallback
+as we dont want whole file to wait while we call a api , we only want that part to be in
+loading and not all the static. 
