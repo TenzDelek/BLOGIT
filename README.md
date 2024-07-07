@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Notes
+1. tailwind is mobile first
+2. Taking Image from outside url (remotePatterns)
+```js
+const nextConfig={
+    images:{
+        remotePatterns:[
+            {
+                protocol:'https',
+                hostname: 'pexel.com',
+            }
+        ]
+    }
+}
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+3. copyright can be get as &copy;
+4. A great approach to make container
+    - at layout we make container so that there will be a max-w for not getting strech
+5. nextjs default behaviour is server components(many benifit like fetching)
+ - usually in react we use useeffect to fetch but in next we can directly do it by declaring the function async
+ **usually used for only GET**
+6. the pathname logic : if href match pathname then change colour
+7. crtl+P to shortcut open file
+8. SERVER ACTION IS USED FOR POST/PUT/DELETE
+9. so the traditional route handler(api) is used for webhook only in next
+10. in dynamic route = when we want to have access of url param we can pass
+params(predefine)like children to get access of it(see post [id])
