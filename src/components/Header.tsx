@@ -15,6 +15,10 @@ const Header = () => {
       href: "/posts",
       label: "Posts",
     },
+    {
+      href: "/create-post",
+      label: "Create",
+    },
   ];
   return (
     <header className=" flex px-7 py-4 border-b justify-between items-center">
@@ -30,7 +34,7 @@ const Header = () => {
       {/* the reason why we are writing two w and h is to tell browser(keep space) as html is load first then css */}
 
       <nav>
-        <ul className=" flex gap-x-5 text-sm  font-bold">
+        <ul className=" flex gap-x-5 text-sm  font-semibold">
           {navitems.map((item, index) => (
             <li key={index}>
                 <Link href={item.href} className={`${path===item.href?"text-zinc-900 ":"text-zinc-400 "}`}>

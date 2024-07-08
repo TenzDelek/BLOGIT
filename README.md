@@ -31,3 +31,28 @@ as we dont want whole file to wait while we call a api , we only want that part 
 loading and not all the static. 
 12. becarefull while client and server.
 all the interactivitly are client and if you make the page.tsx client they you will loose the server functionalities like fetch and all. so best is to use seperate components for it and import it seperately
+
+13. for form and input, a good trick is make the input and buttons hfull and then at the form we can give the height like h10
+14. name is important in input for backend related fetch
+
+# form action(server action)
+- traditionally what we used to do is submit the form and create a onsubmit and call fetch for the api route
+- but in nextjs we have a new way of doing it call server action.
+- in form we use action={afuncname} that function will only run on server
+
+# creating a seperate folder for actions
+- it is recommended to put all the server action function at a one place , "we only have to use "use server" one time that way.
+- remember the function need to be async
+- then next js gives you a special prop formData
+which you can use to extract the detial
+we do it through name that we gvie to the input
+```js
+const title=formData.get("title") as string;
+console.log(title)
+```
+- you can look at the network(in browser) when we submit (a fetch call will happen)
+**nextjs made everything so abstract**
+
+# remember
+- get - can be directly done at server componenet (like fetching data , findmany())
+- post/put/del - uses server action (actions.ts)
