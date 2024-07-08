@@ -1,7 +1,7 @@
 import Postlist from "@/components/post-list";
 import { Suspense } from "react";
 
-export default async function Posts() {
+export default function Posts() {
 
   return (
     <main className="text-center pt-16 px-5">

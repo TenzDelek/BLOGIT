@@ -29,3 +29,5 @@ params(predefine)like children to get access of it(see post [id])
 - but sometime we dont use loading.tsx but we use **suspense** itself with its fallback
 as we dont want whole file to wait while we call a api , we only want that part to be in
 loading and not all the static. 
+12. becarefull while client and server.
+all the interactivitly are client and if you make the page.tsx client they you will loose the server functionalities like fetch and all. so best is to use seperate components for it and import it seperately
