@@ -1,4 +1,5 @@
 'use client'
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -35,13 +36,22 @@ const Header = () => {
 
       <nav>
         <ul className=" flex gap-x-5 text-sm  font-semibold">
+        <SignedIn>
+          <div className=" items-center flex gap-3">
           {navitems.map((item, index) => (
             <li key={index}>
                 <Link href={item.href} className={`${path===item.href?"text-zinc-900 ":"text-zinc-400 "}`}>
                 {item.label}
                 </Link></li>
           ))}
+          <UserButton/>
+          </div>
+          </SignedIn>
+          <SignedOut> 
+            <SignInButton/>
+        </SignedOut>
         </ul>
+       
       </nav>
     </header>
   );
