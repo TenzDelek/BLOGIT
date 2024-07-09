@@ -12,7 +12,7 @@
     "*.{json,md,html}": [
       "npx prettier --write"
     ],
-    "*.{css}": [
+    "*.css": [
       "npx prettier --write"
     ],
     "*.{js,jsx,tsx,ts}": [
