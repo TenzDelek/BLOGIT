@@ -68,3 +68,33 @@ console.log(title)
 
 - get - can be directly done at server componenet (like fetching data , findmany())
 - post/put/del - uses server action (actions.ts)
+
+# database (PRISMA ORM)
+
+- so we dont directly talk with db, orm does that (drizzle,prisma,mongoose)
+- we will use prisma
+  > npm i prisma -save-dev
+  > npx prisma init --datasource-provider sqlite
+  > we go with sqlite but you can choose any
+  > a folder will generate
+
+15. this is how we create schema
+
+```js
+model Post {
+  id    Int    @id @default(autoincrement())
+  title String
+  body  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+```
+
+16. when ever prisma schema and all change we need to run this code
+    > npx prisma db push
+    > this will process the changes in db
+    > this will create a dev.db
+
+## to view the schema
+
+> npx prisma studio
