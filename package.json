@@ -6,13 +6,18 @@
     "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
-    "lint": "prettier --check .",
-    "format":"prettier --write ."
+    "prepare": "husky install"
   },
-  "husky":{
-      "hooks":{
-        "pre-commit":"npm run format && git add -A ."
-      }
+  "lint-staged": {
+    "*.{json,md,html}": [
+      "npx prettier --write"
+    ],
+    "*.{css}": [
+      "npx prettier --write"
+    ],
+    "*.{js,jsx,tsx,ts}": [
+      "npx prettier --write"
+    ]
   },
   "dependencies": {
     "@clerk/nextjs": "^5.2.2",
@@ -26,7 +31,8 @@
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.2.4",
-    "husky": "^9.0.11",
+    "husky": "^8.0.0",
+    "lint-staged": "^15.2.7",
     "postcss": "^8",
     "prettier": "^3.3.2",
     "tailwindcss": "^3.4.1",
