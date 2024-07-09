@@ -98,3 +98,23 @@ model Post {
 ## to view the schema
 
 > npx prisma studio
+
+### instantiating prisma
+
+- currently you cant use prisma like
+  > prisma.post.create({})
+- create a lib and db.ts
+  go to the docs [docs](https://www.prisma.io/docs/orm/more/help-and-troubleshooting/help-articles/nextjs-prisma-client-dev-practices) and copy the db.ts
+- now you can import this in your file where you are using prisma variable
+
+## WRITING
+
+```js
+//adding to db or updating for db
+await prisma.post.create({
+  data: {
+    title,
+    body,
+  },
+});
+```
