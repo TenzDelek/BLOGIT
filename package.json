@@ -7,12 +7,12 @@
     "build": "next build",
     "start": "next start",
     "lint": "prettier --check .",
-    "format":"prettier --write ."
+    "format": "prettier --write ."
   },
-  "husky":{
-      "hooks":{
-        "pre-commit":"npm format && git add -A ."
-      }
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm format && git add -A ."
+    }
   },
   "dependencies": {
     "@clerk/nextjs": "^5.2.2",

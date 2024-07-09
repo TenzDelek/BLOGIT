@@ -11,7 +11,11 @@ const CreatePost = () => {
           type="text"
           className=" outline-none border rounded px-3 h-full"
         />
-        <textarea name="body" className=" border rounded px-1 h-full" placeholder="Body for new post"/>
+        <textarea
+          name="body"
+          className=" border rounded px-1 h-full"
+          placeholder="Body for new post"
+        />
         <button className=" h-full px-2  py-1 text-sm rounded bg-green-500 text-white">
           Submit
         </button>
