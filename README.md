@@ -118,3 +118,9 @@ await prisma.post.create({
   },
 });
 ```
+
+## while deploying
+
+make sure in package.json script you have
+
+> "postinstall": "prisma generate"
