@@ -1,3 +1,4 @@
+// import Forms from "@/components/form";
 import Postlist from "@/components/post-list";
 import { Suspense } from "react";
 
@@ -8,6 +9,7 @@ export default function Posts() {
       <Suspense fallback="Loading..........">
         <Postlist />
       </Suspense>
+      {/* <Forms/> //we can create here and it will auto refresh when new data are inserted*/}
     </main>
   );
 }

@@ -124,3 +124,6 @@ await prisma.post.create({
 make sure in package.json script you have
 
 > "postinstall": "prisma generate"
+
+17. there is a function in nextjs notFound() from next/navigation . used in server comp where if there is no data show this.
+18. we can modify this file by not-found.tsx
